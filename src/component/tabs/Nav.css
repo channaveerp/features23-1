@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
