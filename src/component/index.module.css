@@ -1,0 +1,160 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5% auto;
+  width: 60.8%;
+  /* background: #2A2A2A; */
+  /* color: #ffffff; */
+}
+.contactTxt {
+  font-weight: 600;
+  display: block;
+}
+.contactTxt div {
+  display: flex;
+  gap: 1rem;
+  font-size: 4.5rem;
+  margin-bottom: 4rem;
+}
+.contactTxt div > span {
+  color: #a966ff;
+}
+.labelInputCont {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 10px; */
+  width: 100%;
+}
+.labelInput {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  width: 48%;
+}
+.labelInput input {
+  width: 94%;
+  height: 55px;
+  border-radius: 10px;
+  padding-left: 15px;
+  background-color: #101010;
+  color: #ffffff;
+  font-size: 1rem;
+  border-style: none;
+  outline: none;
+}
+
+.labelInput1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  width: 95%;
+}
+.labelInput1 input {
+  width: 97.7%;
+  height: 55px;
+  border-radius: 10px;
+  padding-left: 15px;
+  background-color: #101010;
+  color: #ffffff;
+  font-size: 1rem;
+  border-style: none;
+  outline: none;
+}
+.purposeArea {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  width: 95.7%;
+  margin-top: 1rem;
+}
+.commentArea {
+  resize: none;
+  width: 97%;
+  height: 193px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #101010;
+  color: #ffffff;
+  font-size: 1rem;
+  border-style: none;
+  outline: none;
+}
+.types {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  /* margin-top: 1rem; */
+}
+.typesContetnt {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 10px;
+}
+.radio {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+.radio input {
+  cursor: pointer;
+}
+.radio label {
+  cursor: pointer;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 52px;
+  /* width: 20%; */
+}
+.btn button {
+  width: 153px;
+  height: 56px;
+  border: none;
+  background-color: #7000ff;
+  border-radius: 30px;
+  padding: 16px 16px;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    width: 80.8%;
+  }
+  .contactTxt{
+    margin-top: 6rem;
+  }
+  .contactTxt div {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  .contactTxt div span {
+    font-size: 1rem;
+    width: 80%;
+  }
+
+  .labelInput {
+    width: 94%;
+  }
+  .labelInput1 {
+    width: 90%;
+  }
+  .commentArea {
+    width: 90%;
+  }
+}
