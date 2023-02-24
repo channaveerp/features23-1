@@ -1,0 +1,25 @@
+.progressbar {
+  width: 26.5%;
+  margin:1rem auto;
+  height: 1rem;
+  border: 1px solid;
+
+}
+.progressbar>div{
+    color: red;
+}
+.footer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.footer > button {
+  border: none;
+  /* outline: none; */
+  border-radius: 12px;
+  width: 80px;
+  height: 50px;
+
+  cursor: pointer;
+}
