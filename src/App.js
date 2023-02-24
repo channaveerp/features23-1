@@ -1,5 +1,6 @@
 import "./App.css";
 import Contactus from "./component/form";
+import MultistepForm from "./component/multiselectform/Form";
 import { Tabs } from "./component/tabs";
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
     <div className="App">
       {/* <h1>lets start</h1> */}
       {/* <Contactus /> */}
-      <Tabs />
+      {/* <Tabs /> */}
+      <MultistepForm />
     </div>
   );
 }
