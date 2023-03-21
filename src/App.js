@@ -1,7 +1,8 @@
 import './App.css';
 import Contactus from './component/form';
+import { Search } from './component/search_network_request';
 import { Tabs } from './component/tabs';
-import Search from './search_funct';
+// import Search from './component/search_funct';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       {/* <h1>lets start</h1> */}
       {/* <Contactus /> */}
       {/* <Tabs /> */}
+      {/* <Search /> */}
       <Search />
     </div>
   );
