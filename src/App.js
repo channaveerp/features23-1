@@ -1,7 +1,10 @@
 import './App.css';
-import Contactus from './component/form';
-import { Search } from './component/search_network_request';
-import { Tabs } from './component/tabs';
+import Edit from './component/EditProfile/Edit';
+
+// import ElasticSearch from './component/elasticsearch';
+// import Contactus from './component/form';
+// import { Search } from './component/search_network_request';
+// import { Tabs } from './component/tabs';
 // import Search from './component/search_funct';
 
 function App() {
@@ -11,7 +14,9 @@ function App() {
       {/* <Contactus /> */}
       {/* <Tabs /> */}
       {/* <Search /> */}
-      <Search />
+      {/* <Search /> */}
+      {/* <ElasticSearch/> */}
+    <Edit/>
     </div>
   );
 }
