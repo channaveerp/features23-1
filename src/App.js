@@ -1,5 +1,7 @@
 import './App.css';
 import Edit from './component/EditProfile/Edit';
+import Slider1 from './component/slider/Slider';
+
 
 // import ElasticSearch from './component/elasticsearch';
 // import Contactus from './component/form';
@@ -16,7 +18,8 @@ function App() {
       {/* <Search /> */}
       {/* <Search /> */}
       {/* <ElasticSearch/> */}
-    <Edit/>
+      {/* <Edit/> */}
+      <Slider1 />
     </div>
   );
 }

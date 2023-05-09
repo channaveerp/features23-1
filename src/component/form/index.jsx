@@ -287,7 +287,7 @@ const Contactus = () => {
           </div>
         </div>
         <div className={style.btn}>
-          <button onClick={handleSubmit}>Submit</button>
+          <button onClick={handleSubmit} type='submit'>Submit</button>
         </div>
       </form>
     </div>
