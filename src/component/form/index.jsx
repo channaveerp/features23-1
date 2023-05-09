@@ -1,64 +1,65 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import Swal from "sweetalert2";
-import style from "./index.module.css";
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import Swal from 'sweetalert2';
+import style from './index.module.css';
 
 const Contactus = () => {
   const [inputData, setinputData] = useState({
-    firstname: "",
-    lastname: "",
-    email: "",
-    phone: "",
-    jobtitle: "",
-    organization: "",
-    weblink: "",
-    comment: "",
-    purpose: "",
+    firstname: '',
+    lastname: '',
+    email: '',
+    phone: '',
+    jobtitle: '',
+    organization: '',
+    weblink: '',
+    comment: '',
+    purpose: '',
   });
   // console.log('purpose', inputData.purpose);
   const [formData, setFormData] = useState([]);
+  const [formErrors, setFormErrors] = useState({});
+  const [isSubmit, setIssubmit] = useState(false);
+
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
     setinputData({ ...inputData, [name]: value });
   };
-  const [formErrors, setFormErrors] = useState({});
-  const [isSubmit, setIssubmit] = useState(false);
 
   const validation = (value) => {
-    console.log("value:", value);
+    console.log('value:', value);
     const errors = {};
     const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if (!value.firstname) {
-      errors.firstname = "First name is required!";
+      errors.firstname = 'First name is required!';
     }
     if (!value.lastname) {
-      errors.lastname = "Last name is required!";
+      errors.lastname = 'Last name is required!';
     }
     if (!value.email) {
-      errors.email = "Email is required!";
+      errors.email = 'Email is required!';
     } else if (!reg.test(value.email)) {
-      errors.email = "Not valid email!";
+      errors.email = 'Not valid email!';
     }
 
-    if (value.phone === "") {
-      errors.phone = "Phone number required!!";
+    if (value.phone === '') {
+      errors.phone = 'Phone number required!!';
     } else if (value.phone.length <= 9) {
-      errors.phone = "Not a valid phone number!!";
+      errors.phone = 'Not a valid phone number!!';
     } else if (value.phone.length > 10) {
-      errors.phone = "Phone number not more then 10 digit!";
+      errors.phone = 'Phone number not more then 10 digit!';
     }
     if (!value.organization) {
-      errors.organization = "Organization is required!";
+      errors.organization = 'Organization is required!';
     }
     if (!value.jobtitle) {
-      errors.jobtitle = "Job title is required!";
+      errors.jobtitle = 'Job title is required!';
     }
     if (!value.weblink) {
-      errors.weblink = "Weblink is required!";
+      errors.weblink = 'Weblink is required!';
     }
     if (!value.type) {
-      errors.type = "Type of business is required!";
+      errors.type = 'Type of business is required!';
     }
 
     return errors;
@@ -68,7 +69,7 @@ const Contactus = () => {
     e.preventDefault();
     setFormErrors(validation(inputData));
     setIssubmit(true);
-    console.log("submit1", isSubmit);
+    console.log('submit1', isSubmit);
     if (
       inputData.firstname &&
       inputData.phone &&
@@ -79,69 +80,69 @@ const Contactus = () => {
     ) {
       let payload = [
         {
-          Attribute: "FirstName",
+          Attribute: 'FirstName',
           Value: inputData.firstname,
         },
         {
-          Attribute: "LastName",
+          Attribute: 'LastName',
           Value: inputData.lastname,
         },
         {
-          Attribute: "EmailAddress",
+          Attribute: 'EmailAddress',
           Value: inputData.email,
         },
         {
-          Attribute: "mx_Organization_Name",
+          Attribute: 'mx_Organization_Name',
           Value: inputData.organization,
         },
         {
-          Attribute: "JobTitle",
+          Attribute: 'JobTitle',
           Value: inputData.jobtitle,
         },
         {
-          Attribute: "Mobile",
+          Attribute: 'Mobile',
           Value: inputData.phone,
         },
         {
-          Attribute: "Website",
+          Attribute: 'Website',
           Value: inputData.weblink,
         },
         {
-          Attribute: "Notes",
+          Attribute: 'Notes',
           Value: inputData.comment,
         },
         {
-          Attribute: "mx_Type",
+          Attribute: 'mx_Type',
           Value: inputData.purpose,
         },
         {
-          Attribute: "Source",
-          Value: "AjnaLens Contact us",
+          Attribute: 'Source',
+          Value: 'AjnaLens Contact us',
         },
       ];
-      axios.post("api", payload);
+      axios.post('api', payload);
       setinputData({
-        firstname: "",
-        lastname: "",
-        email: "",
-        phone: "",
-        jobtitle: "",
-        organization: "",
-        weblink: "",
-        comment: "",
-        purpose: "",
+        firstname: '',
+        lastname: '',
+        email: '',
+        phone: '',
+        jobtitle: '',
+        organization: '',
+        weblink: '',
+        comment: '',
+        purpose: '',
       });
-      Swal.fire("Form submitted succesfully");
+      Swal.fire('Form submitted succesfully');
     }
   };
 
   useEffect(() => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log("input", inputData);
+      console.log('input', inputData);
     }
   }, [formErrors]);
   // console.log('input', inputData);
-  console.log("submit2", isSubmit);
+  console.log('submit2', isSubmit);
 
   return (
     <div className={style.container}>
@@ -154,140 +155,139 @@ const Contactus = () => {
       <form>
         <div className={style.labelInputCont}>
           <div className={style.labelInput}>
-            <label htmlFor="">First Name*</label>
+            <label htmlFor=''>First Name*</label>
             <input
-              type="text"
-              name="firstname"
+              type='text'
+              name='firstname'
               value={inputData.firstname}
               onChange={handleChange}
-              autoComplete="off"
+              autoComplete='off'
             />
-            <p style={{ color: "red" }}>{formErrors.firstname}</p>
+            <p style={{ color: 'red' }}>{formErrors.firstname}</p>
           </div>
           <div className={style.labelInput}>
-            <label htmlFor="">Last Name*</label>
+            <label htmlFor=''>Last Name*</label>
             <input
-              type="text"
-              name="lastname"
+              type='text'
+              name='lastname'
               value={inputData.lastname}
               onChange={handleChange}
-              autoComplete="off"
+              autoComplete='off'
             />
-            <p style={{ color: "red" }}>{formErrors.lastname}</p>
+            <p style={{ color: 'red' }}>{formErrors.lastname}</p>
           </div>
           <div className={style.labelInput}>
-            <label htmlFor="">Business Email*</label>
+            <label htmlFor=''>Business Email*</label>
             <input
-              type="text"
-              name="email"
+              type='text'
+              name='email'
               value={inputData.email}
               onChange={handleChange}
             />
-            <p style={{ color: "red" }}>{formErrors.email}</p>
+            <p style={{ color: 'red' }}>{formErrors.email}</p>
           </div>
           <div className={style.labelInput}>
-            <label htmlFor="">Organization Name*</label>
+            <label htmlFor=''>Organization Name*</label>
             <input
-              type="text"
-              name="organization"
+              type='text'
+              name='organization'
               value={inputData.organization}
               onChange={handleChange}
             />
-            <p style={{ color: "red" }}>{formErrors.organization}</p>
+            <p style={{ color: 'red' }}>{formErrors.organization}</p>
           </div>
           <div className={style.labelInput}>
-            <label htmlFor="">Job Title*</label>
+            <label htmlFor=''>Job Title*</label>
             <input
-              type="text"
-              name="jobtitle"
+              type='text'
+              name='jobtitle'
               value={inputData.jobtitle}
               onChange={handleChange}
             />
-            <p style={{ color: "red" }}>{formErrors.jobtitle}</p>
+            <p style={{ color: 'red' }}>{formErrors.jobtitle}</p>
           </div>
           <div className={style.labelInput}>
-            <label htmlFor="">Contact Number*</label>
+            <label htmlFor=''>Contact Number*</label>
             <input
-              type="text"
-              name="phone"
+              type='text'
+              name='phone'
               value={inputData.phone}
               onChange={handleChange}
-              maxLength="10"
+              maxLength='10'
             />
-            <p style={{ color: "red" }}>{formErrors.phone}</p>
+            <p style={{ color: 'red' }}>{formErrors.phone}</p>
           </div>
           <div className={style.labelInput1}>
-            <label htmlFor="">Website Link Here*</label>
+            <label htmlFor=''>Website Link Here*</label>
             <input
-              type="text"
-              name="weblink"
+              type='text'
+              name='weblink'
               value={inputData.weblink}
               onChange={handleChange}
             />
-            <p style={{ color: "red" }}>{formErrors.weblink}</p>
+            <p style={{ color: 'red' }}>{formErrors.weblink}</p>
           </div>
           <div className={style.types}>
             <div>Type</div>
             <div className={style.typesContetnt}>
               <div className={style.radio}>
                 <input
-                  type="radio"
-                  name="purpose"
-                  value="support"
-                  id="support"
+                  type='radio'
+                  name='purpose'
+                  value='support'
+                  id='support'
                   onChange={handleChange}
-                  checked={inputData.purpose === "support"}
+                  checked={inputData.purpose === 'support'}
                 />
-                <label htmlFor="support">support</label>
+                <label htmlFor='support'>support</label>
               </div>
               <div className={style.radio}>
                 <input
-                  type="radio"
-                  name="purpose"
-                  id="business_enquiry"
-                  value="business_enquiry"
-                  checked={inputData.purpose === "business_enquiry"}
+                  type='radio'
+                  name='purpose'
+                  id='business_enquiry'
+                  value='business_enquiry'
+                  checked={inputData.purpose === 'business_enquiry'}
                   onChange={handleChange}
                 />
-                <label htmlFor="business_enquirey">Business enquiry</label>
+                <label htmlFor='business_enquirey'>Business enquiry</label>
               </div>
               <div className={style.radio}>
                 <input
-                  type="radio"
-                  name="purpose"
-                  id="partnership"
-                  value="partnership"
-                  checked={inputData.purpose === "partnership"}
+                  type='radio'
+                  name='purpose'
+                  id='partnership'
+                  value='partnership'
+                  checked={inputData.purpose === 'partnership'}
                   onChange={handleChange}
                 />
-                <label htmlFor="partnership">Partnership</label>
+                <label htmlFor='partnership'>Partnership</label>
               </div>
               <div className={style.radio}>
                 <input
-                  type="radio"
-                  name="purpose"
-                  id="others"
-                  value="others"
-                  checked={inputData.purpose === "others"}
+                  type='radio'
+                  name='purpose'
+                  id='others'
+                  value='others'
+                  checked={inputData.purpose === 'others'}
                   onChange={handleChange}
                 />
-                <label htmlFor="others">Others</label>
+                <label htmlFor='others'>Others</label>
               </div>
             </div>
           </div>
           <div className={style.purposeArea}>
-            <label htmlFor="">Mention your purpose below*</label>
+            <label htmlFor=''>Mention your purpose below*</label>
             <textarea
               className={style.commentArea}
-              name="comment"
+              name='comment'
               value={inputData.comment}
               onChange={handleChange}
-              placeholder="Write your message here..."
-            ></textarea>
+              placeholder='Write your message here...'></textarea>
           </div>
         </div>
         <div className={style.btn}>
-          <button onClick={handleSubmit}>Submit</button>
+          <button onClick={handleSubmit} type='submit'>Submit</button>
         </div>
       </form>
     </div>

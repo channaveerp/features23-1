@@ -1,0 +1,2 @@
+1. createing input field
+2. mapping users list in ul(li)
