@@ -1,6 +1,7 @@
 import './App.css';
-import Contactus from './component/form';
-import Pagination from './component/pagination/Pagination';
+import Succes from './component/Succes/Succes';
+import MySwipper from './component/swipper/MySwipper';
+
 import { Tabs } from './component/tabs';
 
 function App() {
@@ -9,7 +10,9 @@ function App() {
       {/* <h1>lets start</h1> */}
       {/* <Contactus /> */}
       {/* <Tabs /> */}
-      <Pagination />
+      {/* <Pagination /> */}
+      {/* <MySwipper /> */}
+      <Succes />
     </div>
   );
 }
