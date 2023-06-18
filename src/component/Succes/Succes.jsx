@@ -1,28 +1,30 @@
 import React from 'react';
-import './Succes.css';
+import styles from './page.module.css';
 import { data } from './constant';
 
-console.log('data:', data.map);
+console.log(
+  'data:',
+  data.map((e) => console.log(e.id))
+);
 
 const Cirriculum = () => {
   return (
-    <div className='mainContainer'>
-      {data.map((item, index) => (
-        <div className='items' key={index}>
-          <div className='imgCont'>
-            <img src={item.img} alt='Course' />
-          </div>
-
-          <div>
-            <div className='titleCont'>
-              <h1 className='title'>{item.title}</h1>
-              <p className='lessons'>{item.lessons}</p>
-            </div>
-            <div className='desc'>
-              {item?.desc?.map((e, index) => (
-                <p key={index}>{e}</p>
+    <div>
+      {data.map((e, index) => (
+        <div className={styles.content}>
+          <div className={styles.textCont}>
+            <h1>{e.title}</h1>
+            <div className={styles.desc}>
+              {e.desc.map((item) => (
+                <>
+                  <div>{item}</div>
+                </>
               ))}
             </div>
+          </div>
+          <div className={styles.imgCont}>
+            <img src={e.img} className={styles.img} />
+            <span className={styles.number}>{e.id}</span>
           </div>
         </div>
       ))}
