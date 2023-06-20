@@ -1,5 +1,6 @@
 import './App.css';
 import Succes from './component/Succes/Succes';
+import StudentWork from './component/studentwork/StudentWork';
 import MySwipper from './component/swipper/MySwipper';
 
 import { Tabs } from './component/tabs';
@@ -12,7 +13,8 @@ function App() {
       {/* <Tabs /> */}
       {/* <Pagination /> */}
       {/* <MySwipper /> */}
-      <Succes />
+      {/* <Succes /> */}
+      <StudentWork />
     </div>
   );
 }

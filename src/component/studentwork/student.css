@@ -1,0 +1,23 @@
+.gridcont {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.imgwithTextCont {
+  position: relative;
+}
+.text {
+  position: absolute;
+  z-index: 1000;
+  bottom: 0.5%;
+  left: 3%;
+}
+.imgcont {
+  aspect-ratio: 3/2;
+}
+.imgcont > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
