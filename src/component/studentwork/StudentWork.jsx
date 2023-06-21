@@ -26,6 +26,7 @@ const StudentWork = () => {
               <p>{item.experience}</p>
               <p>{item.student_name}</p>
             </div>
+            <div className='overlay'>{item.over}</div>
           </div>
         ))
       ) : (
