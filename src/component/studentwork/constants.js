@@ -1,67 +1,45 @@
-import c1 from '../../assets/c1.jpg';
+import ab1 from '../../assets/ab1.svg';
+import ab2 from '../../assets/ab2.svg';
+import ab3 from '../../assets/ab3.svg';
+import ab4 from '../../assets/ab4.svg';
+import ab5 from '../../assets/ab5.svg';
+
+
 
 export const studentworks = [
   {
     id: 1,
     student_name: 'By Aman Srivastava',
     experience: 'Experience Design',
-    images: c1,
+    images: ab1,
     over: 'dancing ggf c dgdc cbcsgycb j v h ch kjch',
   },
   {
     id: 2,
     student_name: 'By Aman Srivastava',
     experience: 'Experience Design',
-    images: c1,
+    images: ab5,
     over: 'dancing ggf c dgdc cbcsgycb j v h ch kjch',
   },
   {
     id: 3,
     student_name: 'By Aman Srivastava',
     experience: 'Experience Design',
-    images: c1,
+    images: ab3,
     over: 'dancing ggf c dgdc cbcsgycb j v h ch kjch',
   },
   {
     id: 4,
     student_name: 'By Aman Srivastava',
     experience: 'Experience Design',
-    images: c1,
+    images: ab4,
     over: 'dancing ggf c dgdc cbcsgycb j v h ch kjch',
   },
   {
     id: 5,
     student_name: 'By Aman Srivastava',
     experience: 'Experience Design',
-    images: c1,
-    over: 'dancing ggf c dgdc cbcsgycb j v h ch kjch',
-  },
-  {
-    id: 6,
-    student_name: 'By Aman Srivastava',
-    experience: 'Experience Design',
-    images: c1,
-    over: 'dancing ggf c dgdc cbcsgycb j v h ch kjch',
-  },
-  {
-    id: 7,
-    student_name: 'By Aman Srivastava',
-    experience: 'Experience Design',
-    images: c1,
-    over: 'dancing ggf c dgdc cbcsgycb j v h ch kjch',
-  },
-  {
-    id: 8,
-    student_name: 'By Aman Srivastava',
-    experience: 'Experience Design',
-    images: c1,
-    over: 'dancing ggf c dgdc cbcsgycb j v h ch kjch',
-  },
-  {
-    id: 9,
-    student_name: 'By Aman Srivastava',
-    experience: 'Experience Design',
-    images: c1,
+    images: ab2,
     over: 'dancing ggf c dgdc cbcsgycb j v h ch kjch',
   },
 ];

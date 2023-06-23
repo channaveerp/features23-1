@@ -18,13 +18,22 @@ const StudentWork = () => {
     <div className='gridcont'>
       {dataToShow.length > 0 ? (
         dataToShow.map((item, i) => (
-          <div className='imgwithTextCont' key={i}>
-            <div className='imgcont'>
-              <img src={item.images} alt='' />
-            </div>
-            <div className='text'>
-              <p>{item.experience}</p>
-              <p>{item.student_name}</p>
+          <div className='imgwithTextCont'>
+            <div key={i}>
+              {i !== 4 ? (
+                <div className='imgcont'>
+                  <img src={item.images} alt='' />
+                </div>
+              ) : (
+                <div className='lastimgcont'>
+                  <img src={item.images} alt='' />
+                </div>
+              )}
+
+              <div className='text'>
+                <p>{item.experience}</p>
+                <p>{item.student_name}</p>
+              </div>
             </div>
             <div className='overlay'>{item.over}</div>
           </div>
