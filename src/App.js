@@ -1,5 +1,6 @@
 import './App.css';
 import Succes from './component/Succes/Succes';
+import CardExpanding from './component/cardExpanding/CardExpanding';
 import StudentWork from './component/studentwork/StudentWork';
 import MySwipper from './component/swipper/MySwipper';
 
@@ -14,7 +15,8 @@ function App() {
       {/* <Pagination /> */}
       {/* <MySwipper /> */}
       {/* <Succes /> */}
-      <StudentWork />
+      {/* <StudentWork /> */}
+      <CardExpanding />
     </div>
   );
 }
