@@ -13,7 +13,7 @@ export const Search = () => {
   };
 
   const keys = ['first_name', 'last_name', 'email'];
-  console.log(User[0].email);
+  // console.log(User[0].email);
 
   /*searching by email,fname,lname */
 

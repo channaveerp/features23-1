@@ -19,7 +19,7 @@ const Pagination = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  console.log('res', responseData.length);
+  // console.log('res', responseData.length);
 
   const handleFilter = (e) => {
     setmenFilter(e.target.checked);
@@ -27,7 +27,7 @@ const Pagination = () => {
   const filteredData = menFilter
     ? responseData.filter((item, index) => item.category === "men's clothing")
     : responseData;
-  console.log('filteredData', filteredData);
+  // console.log('filteredData', filteredData);
   const paginationdata = filteredData.slice(firstIndex, lastIndex);
   return (
     <div>

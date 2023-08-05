@@ -1,14 +1,14 @@
 import React from 'react';
 
 const Pageshow = ({ totalpost, postPerpage, setCurrentPage }) => {
-  console.log('postPerpage:', postPerpage);
-  console.log('totalpost:', totalpost);
+  // console.log('postPerpage:', postPerpage);
+  // console.log('totalpost:', totalpost);
 
   let page = [];
   for (let i = 1; i <= Math.ceil(totalpost / postPerpage); i++) {
     page.push(i);
   }
-  console.log('page', page);
+  // console.log('page', page);
   return (
     <div
       style={{

@@ -27,7 +27,7 @@ const Contactus = () => {
   };
 
   const validation = (value) => {
-    console.log('value:', value);
+    // console.log('value:', value);
     const errors = {};
     const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if (!value.firstname) {
@@ -138,11 +138,11 @@ const Contactus = () => {
 
   useEffect(() => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log('input', inputData);
+      // console.log('input', inputData);
     }
   }, [formErrors]);
   // console.log('input', inputData);
-  console.log('submit2', isSubmit);
+  // console.log('submit2', isSubmit);
 
   return (
     <div className={style.container}>

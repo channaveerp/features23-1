@@ -3,7 +3,7 @@ import { data } from './data';
 
 const Search = () => {
   const [query, setQuery] = useState('');
-  console.log('query:', query);
+  // console.log('query:', query);
 
   const handleQuery = (e) => {
     setQuery(e.target.value);

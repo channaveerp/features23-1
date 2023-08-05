@@ -1,7 +1,7 @@
 import React from 'react';
 
 const PaginationCard = ({ paginationdata }) => {
-  console.log('paginationdata:', paginationdata);
+  // console.log('paginationdata:', paginationdata);
 
   return (
     <div>

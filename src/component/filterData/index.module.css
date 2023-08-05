@@ -1,0 +1,24 @@
+.mainCont {
+  display: flex;
+  justify-content: space-between !important;
+  margin-top: 4rem;
+  border: 1px solid;
+  width: auto !important;
+}
+.labelWithRadio {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.dataCont {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.imgCont {
+  width: 100px;
+}
+.imgCont > img {
+  width: 100%;
+  object-fit: cover;
+}

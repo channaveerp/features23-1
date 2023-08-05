@@ -18,7 +18,7 @@ const Slider1 = () => {
       <Slider {...settings}>
         {data.map((e) => (
           <>
-            console.log('data:', data);
+            {/* console.log('data:', data); */}
             <img src={e.img} alt='' />
           </>
         ))}

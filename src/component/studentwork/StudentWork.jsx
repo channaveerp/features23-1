@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './student.css';
 import { studentworks } from './constants';
-console.log('studentworks:', studentworks);
+// console.log('studentworks:', studentworks);
 
 const StudentWork = () => {
   const [showMore, setShowMore] = useState(false);
